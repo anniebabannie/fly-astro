@@ -4,7 +4,7 @@
 APP_NAME="fly-astro-pr-$1"
 
 # Check if the app already exists
-if flyctl apps list | grep -q "^$$APP_NAME$"; then
+if flyctl apps list | grep -q $APP_NAME; then
     # If the app exists, deploy to it
     echo "App $APP_NAME already exists, deploying..."
     flyctl deploy --app=$APP_NAME --remote-only
