@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Define the app name
-APP_NAME="fly-astro-pr-${{ github.event.number }}"
+# Define the app name + PR number
+APP_NAME="fly-astro-pr-$1"
 
 # Check if the app already exists
 if flyctl apps list | grep -q $APP_NAME; then
