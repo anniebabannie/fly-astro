@@ -12,4 +12,5 @@ else
     # If the app doesn't exist, launch it
     echo "Launching new app $APP_NAME..."
     flyctl launch --name=$APP_NAME --copy-config -y
+    flyctl deploy --app=$APP_NAME --remote-only
 fi
